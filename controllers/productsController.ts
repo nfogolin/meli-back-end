@@ -23,8 +23,7 @@ const SearchProducts = (req:any, res:Response) => {
               })
             ,
             "items":
-              //result?.results?.slice(0, 4).map((product:any) => {
-                result?.results?.map((product:any) => {
+              result?.results?.slice(0, 4).map((product:any) => {
                 return {
                   "id" : product?.id,
                   "title": product?.title,
