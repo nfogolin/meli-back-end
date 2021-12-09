@@ -1,6 +1,11 @@
 import { validationResult } from 'express-validator'
 import { Request, Response } from 'express';
 
+/*
+Función generica para generar una validación de campos requeridos y retornar una array con todos 
+los errores detectados.
+*/
+
 const validateFields = (req:Request, res:Response, next:any) =>{
 
     const errors = validationResult(req);

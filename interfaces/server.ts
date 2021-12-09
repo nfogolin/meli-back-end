@@ -5,9 +5,9 @@ interface IServer {
     Port: number,
     SearchProductsPath: string,
 
-    Middlewares(): void
+    Middlewares(): void //Interceptores
 
-    Routes(): void
+    Routes(): void //Manejador de la rutas solicitadas.
 
     Start(): void
 

@@ -4,6 +4,14 @@ import { ErrorsEnum } from '../helpers/errorsEnum';
 
 import axios from 'axios';
 
+/*
+  Clase encargada de consumir datos de forma externa. También tiene una función que es invoca al
+  momento de recibir/responder peticiones para ser loguedos en una base de datos como un registro
+  de control. Puede ser sobre cualquier motor de BDD, por ejemplo MongoDB.
+
+  Las Url están harcodeadas, deben ser llevadas a un config externo.
+*/
+
 class SERVICES {
 
     LogServiceActivity = async (sActivityId:string

@@ -6,6 +6,12 @@ import { SearchProductData, SearchProducts } from '../controllers/productsContro
 import interceptorReq from '../middlewares/interceptorReq'
 import { ErrorsEnum } from '../helpers/errorsEnum';
 
+/*
+Encargado de recibir la invocaciones a las diferentes rutas, regitrar la petición con el interceptor
+, chequear los parametros requiridos y finalmente en caso de estar todo correcto hacer la llamada a 
+la función encargada de procesar, dicha función se encuentra en el controllador.
+*/
+
 const ProductsRouter = Router();
 
 ProductsRouter.get('/', [

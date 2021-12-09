@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import IServer from '../interfaces/server';
-import ClientsRouter from '../routes/products';
+import ProductsRouter from '../routes/products';
 import interceptorRes from '../middlewares/interceptorRes';
 import configs from '../helpers/configs';
 
@@ -28,7 +28,7 @@ class Server implements IServer {
 
     Routes(){
         this.App.use(interceptorRes);        
-        this.App.use(this.SearchProductsPath, ClientsRouter);
+        this.App.use(this.SearchProductsPath, ProductsRouter);
         this.App.use('*', express.static('public'));
     }
 

@@ -3,6 +3,10 @@ import SERVICES from '../services/external-services';
 
 import { ResponseError } from '../helpers/log';
 
+/*
+Controlador específico que aloja las funciones y brinda una respuesta al router.
+*/
+
 const SearchProducts = (req:any, res:Response) => {
 
     let txtSearch:string = (req.query.q || "").toString();

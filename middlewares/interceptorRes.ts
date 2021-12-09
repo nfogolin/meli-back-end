@@ -1,5 +1,9 @@
 import { Request, Response } from 'express';
 import { RegisterLogActivity } from '../helpers/log';
+
+/*
+Interceptor de respuesta, que toma el activityId generado en el request para relacionarlo a la respuesta.
+*/
  
 const interceptorRes = (req:Request, res:Response, next:any) => {
     var oldWrite:any = res.write
